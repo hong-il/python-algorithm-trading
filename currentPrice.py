@@ -6,6 +6,7 @@
     @ Description : 
 """
 import win32com.client
+from sendMessage import SendMessage
 
 # 연결 여부 체크
 objCpCybos = win32com.client.Dispatch("CpUtil.CpCybos")
@@ -59,14 +60,16 @@ print("매수호가", bid)
 print("거래량", vol)
 print("거래대금", vol_value)
 
-if (exFlag == ord('0')):
+if exFlag == ord('0'):
     print("장 구분값: 동시호가와 장중 이외의 시간")
-elif (exFlag == ord('1')):
+elif exFlag == ord('1'):
     print("장 구분값: 동시호가 시간")
-elif (exFlag == ord('2')):
+elif exFlag == ord('2'):
     print("장 구분값: 장중 또는 장종료")
 
 print("예상체결가 대비 수량")
 print("예상체결가", exPrice)
 print("예상체결가 대비", exDiff)
 print("예상체결수량", exVol)
+
+SendMessage.post_message('#금융-솔루션', f'삼성전자 현재가: {offer}')
