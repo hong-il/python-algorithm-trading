@@ -7,21 +7,12 @@ import win32com.client
     @ Date      : 2021-07-10
     @ File name : monitorVI.py
     @ File path :
-    @ Description :
-
-
-■ stockPricedData: 감시 중인 현재가 정보 저장 구조체
-
-■ CpEvent: 실시간 이벤트 수신
-
-
-■ CpPBStockCur : 실시간 현재가 요청
-
-■ CpPBStockBid : 실시간 10차 호가 요청
-
-■ CpRPCurrentPrice : 실시간 현재가 기본 조회
-
-■ testMain : 이번 샘플에 대한 메인 기능을 제공하며 실시간 vi 발동 종목에 대한 감시 수행
+    @ Description : ■ stockPricedData: 감시 중인 현재가 정보 저장 구조체
+                    ■ CpEvent: 실시간 이벤트 수신
+                    ■ CpPBStockCur : 실시간 현재가 요청
+                    ■ CpPBStockBid : 실시간 10차 호가 요청
+                    ■ CpRPCurrentPrice : 실시간 현재가 기본 조회
+                    ■ testMain : 이번 샘플에 대한 메인 기능을 제공하며 실시간 vi 발동 종목에 대한 감시 수행
 
 """
 g_objCodeMgr = win32com.client.Dispatch("CpUtil.CpCodeMgr")
